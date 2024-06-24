@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #53A2B3;
+}
+
+.navbar {
+    background-color: #EBEBEB;
+    color: #2A364E;
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-icon{
+    background: none; 
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+}
+.menu-icon img {
+    margin-right: 20px; 
+}
+
+.menu-icon img, .menu-toggle img {
+    width: 45px;
+    height: 45px;
+
+}
+
+.logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-right: auto; 
+}
+
+.logo1 {
+    font-size: 2em;
+    color: #2A364E;
+    font-weight: bold; 
+    position: absolute;
+    top: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right:40px;
+}
+
+.navbar-links a {
+    display: inline-block; 
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #2A364E;
+    background-color: #EBEBEB; 
+    border-radius: 20px; 
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+.navbar-links a:hover {
+    background-color: #2A364E; 
+    color: #EBEBEB;
+}
+
+.navbar-links2 a {
+    display: inline-block; 
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #EBEBEB;
+    background-color:#2A364E; 
+    border-radius: 20px; 
+    font-size: 1.1em;
+}
+
+.login-container {
+    background-color: #F2F1E2;
+    width: 400px;
+    height: 420px;
+    padding: 20px;
+    border-radius: 9px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    overflow: visible; 
+}
+
+.logo-space {
+    width: 160px; 
+    height: 160px; 
+    position: absolute;
+    top: -100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('Logo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px; 
+    top: 300px;
+}
+
+.login-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #53A2B3;
+    color: #53A2B3;
+    margin: 10px 0;
+    padding: 11px;
+    width: 70%; 
+    top: 300px;
+    outline: none;
+    box-shadow: none;
+
+}
+
+.login-form button {
+    background-color: #53A2B3;
+    color: #F2F1E2;
+    border: none;
+    padding: 12px;
+    height: 40px;
+    width: 250px; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.extra-links {
+    text-align: center;
+    width: 100%;
+}
+
+.extra-links2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.extra-links2 a {
+    color: #2A364E;
+    text-decoration: none;
+    font-size: 0.7rem; 
+}
+.extra-links a {
+    color: #2A364E;
+    text-decoration: none;
+    font-size: 0.7rem;
+    display: block; 
+    margin: -2px 0; 
+    margin-top: 10px;
+}
+
+.forgot-link {
+    text-align: left; 
+    width: 74%; 
+    margin: 5px 0; 
+    margin-top: 10px;
+
+}
+
+.forgot-link a {
+    color: #2A364E;
+    text-decoration: none; 
+    font-size: 0.8rem;
+    display: block; 
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+.login-form input::placeholder {
+    color: #53A2B3; 
+}

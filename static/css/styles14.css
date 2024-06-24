@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #53A2B3;
+}
+
+.navbar {
+    background-color: #EBEBEB;
+    color: #2A364E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    background: none; 
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.menu-icon img, .menu-toggle img {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.regresar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: -120px;
+    margin-right: 60px;
+    margin-top: 10px;
+    padding: 0;
+    width: 40px;  /* Ajusta según el tamaño deseado del icono */
+    height: 40px; /* Ajusta según el tamaño deseado del icono */
+    display: inline-block;
+    line-height: 0; /* Elimina espacio extra alrededor del icono */
+    vertical-align: middle; /* Alinea con el texto si es necesario */
+}
+
+.regresar img {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    margin-left: -120px;
+    margin-top: -7px;
+}
+
+
+.logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-right: auto; 
+}
+
+.logo1 {
+    font-size: 2em;
+    color: #2A364E;
+    font-weight: bold;
+    margin-top: -220px; /* Ajustado para más espacio */
+    text-align: center;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    margin-bottom: 100px;
+}
+
+.navbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 40px;
+}
+
+.navbar-links a, .navbar-links2 a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #2A364E;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+.navbar-links a:hover, .navbar-links2 a {
+    background-color: #2A364E;
+    color: #EBEBEB;
+}
+
+
+
+.login-container {
+    background-color: #F2F1E2;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 9px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.login-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #53A2B3;
+    color: #53A2B3;
+    margin: 10px 0;
+    padding: 11px;
+    width: 70%;
+    outline: none;
+    box-shadow: none;
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    width: 100%; /* Ajusta el ancho al del formulario */
+}
+
+.button-link {
+    background-color: #53A2B3;
+    color: #F2F1E2;
+    border: 2px solid #53A2B3; /* Asegura que el borde sea visible */
+    padding: 10px 12px; /* Ajusta el padding para tamaño uniforme */
+    height: auto; /* Permite que el contenido determine la altura */
+    min-width: 120px; /* Asegura un ancho mínimo */
+    width: auto; /* Ancho automático basado en el contenido */
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px; /* Asegura que el tamaño de fuente sea el mismo para ambos */
+    text-align: center;
+    display: inline-block; /* Mantiene el elemento en línea y permite dimensiones */
+    text-decoration: none; /* Elimina subrayado de enlace */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.extra-links, .extra-links2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.extra-links a, .extra-links2 a {
+    color: #2A364E;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 10px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.login-form input::placeholder {
+    color: #53A2B3;
+}

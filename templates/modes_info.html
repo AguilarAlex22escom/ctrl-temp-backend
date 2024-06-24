@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles6.css" />
+  </head>
+  <body>
+    {% include 'layout/modes_navbar.html' %}
+
+    <div class="titulo">
+      <a class="regresar" href="/temperature_modes">
+        <img src="../static/images/icono-regresar.png" alt="regresar" />
+      </a>
+      <span> INFORMACIÓN MODOS DE FUNCIONAMIENTO </span>
+    </div>
+
+    <div class="modos-ajuste">
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-calor.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Modo calor</span>
+            <p>
+              Este modo es recomendado para cuando la temperatura se encuentra
+              por debajo de 19°C. Se encargará de mantener el ambiente cálido.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-frio.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Modo frío</span>
+            <p>
+              Este modo es recomendado para cuando la temperatura se encuentra
+              por encima de 25°C. Se encargará de mantener el ambiente fresco.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-ventilador.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Modo ventilador</span>
+            <p>
+              Este modo es recomendado para cuando se quiere que el aire del
+              ambiente circule eficazmente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-automatico.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Modo automatico</span>
+            <p>
+              Este modo es recomendado para cuando la temperatura se desea
+              mantener la temperatura ideal en el rango de 20°C- 24°C.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% extends 'layout/burger_menu.html' %}
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles5.css" />
+  </head>
+
+  <body>
+    {% include 'layout/modes_navbar.html' %}
+
+    <div class="modos-ajuste">
+      <h1 class="titulo">MODOS DE FUNCIONAMIENTO</h1>
+      <div class="columna">
+        <div class="pregunta">¿Desea hacer el ambiente más cálido?</div>
+        <div class="modo">
+          <div class="modo-icono">
+            <img src="../static/images/icono-calor.png" alt="Icono Calor" />
+          </div>
+          <div class="modo-texto-y-boton">
+            <span>Modo calor</span>
+            <form method="POST">
+              <input type="hidden" value="28" name="temperature" />
+              <button
+                class="circle-button"
+                id="btnCalor"
+                onclick="toggleModo('calor', this)"
+                type="submit"
+              >
+                Activar
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="pregunta">¿Desea enfriar el ambiente?</div>
+        <div class="modo">
+          <div class="modo-icono">
+            <img src="../static/images/icono-frio.png" alt="Icono Frío" />
+          </div>
+          <div class="modo-texto-y-boton">
+            <span>Modo frío</span>
+            <form method="POST">
+              <input type="hidden" value="15" name="temperature" />
+              <button
+                class="circle-button"
+                id="btnFrio"
+                onclick="toggleModo('frio', this)"
+              >
+                Activar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="columna">
+        <div class="pregunta">¿Desea refrescar el ambiente?</div>
+        <div class="modo">
+          <div class="modo-icono">
+            <img
+              src="../static/images/icono-ventilador.png"
+              alt="Icono Ventilador"
+            />
+          </div>
+          <div class="modo-texto-y-boton">
+            <span>Modo ventilador</span>
+            <form method="POST">
+              <input type="hidden" value="18" name="temperature" />
+              <button
+                class="circle-button"
+                id="btnVentilador"
+                onclick="toggleModo('ventilador', this)"
+              >
+                Activar
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="pregunta">¿Desea mantener una temperatura estándar?</div>
+        <div class="modo">
+          <div class="modo-icono">
+            <img
+              src="../static/images/icono-automatico.png"
+              alt="Icono Automático"
+            />
+          </div>
+          <div class="modo-texto-y-boton">
+            <span>Modo automático</span>
+            <form method="POST">
+              <input type="hidden" value="23" name="temperature" />
+              <button
+                class="circle-button"
+                id="btnAutomatico"
+                onclick="toggleModo('automatico', this)"
+              >
+                Activar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="informacion-adicional">
+        <a href="/modes_info" class="enlace-informacion"
+          >¿Desea conocer más acerca de los modos de funcionamiento?
+        </a>
+      </div>
+    </div>
+
+    {% if actived_mode %}
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalMessage">El modo ha sido activado correctamente</p>
+      </div>
+    </div>
+    {% endif %} {% if actived_mode == temperature_data %}
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Se debe desactivar el modo actual antes de seleccionar otro.</p>
+      </div>
+    </div>
+    {% endif %} {% include 'layout/burger_menu.html' %}
+  </body>
+</html>

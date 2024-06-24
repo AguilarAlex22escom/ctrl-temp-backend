@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles12.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    {% include 'layout/main_navbar.html' %}
+
+    <div class="titulo">
+      <span> ESTADISTICAS </span>
+    </div>
+
+    <div class="chart-container">
+      <select id="monthSelector" class="month-selector">
+        <option value="0">Enero 2024</option>
+        <option value="1">Febrero 2024</option>
+        <option value="2">Marzo 2024</option>
+        <option value="3">Abril 2024</option>
+        <option value="4" selected>Mayo 2024</option>
+        <option value="5">Junio 2024</option>
+      </select>
+      <canvas id="temperatureChart"></canvas>
+    </div>
+    {% include 'layout/burger_menu.html' %}
+    <script src="script12.js"></script>
+
+    <script>
+      let temperaturesList = {{ temperatures|tojson|safe }}
+      const ctx = document.getElementById("temperatureChart").getContext("2d");
+      let temperatureData = [];
+      let dateLabels = [];
+      temperaturesList.forEach(record => {
+        temperatureData.push(record.daily_average);
+        dateLabels.push(new Date(record.date).getDay());
+      });
+      console.log(temperaturesList)
+      console.log(dateLabels)
+      let temperatureChart = new Chart(ctx, {
+        type: "line", // Tipo de gráfica
+        data: {
+          labels: dateLabels, // Días del mes
+          datasets: [
+            {
+              label: "Temperatura diaria",
+              backgroundColor: "rgba(54, 162, 235, 0.5)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              data: temperatureData
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: false,
+            },
+          },
+        },
+      });
+
+      document
+        .getElementById("monthSelector")
+        .addEventListener("change", (e) => {
+          let selectedMonth = parseInt(e.target.value) + 1 
+          
+          let filteredData = temperaturesList.filter(record => {
+            return new Date(record.date).getMonth() === selectedMonth;
+          });
+
+          // Actualizar los datos del gráfico
+          temperatureChart.data.labels = filteredData.map(record => new Date(record.date).getDay());
+          temperatureChart.data.datasets[0].data = filteredData.map(record => record.daily_average);
+          temperatureChart.update();
+        });
+    </script>
+  </body>
+</html>

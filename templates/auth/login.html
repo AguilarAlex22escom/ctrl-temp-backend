@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles2.css" />
+    <link rel="stylesheet" href="../static/css/burger_menu.css" />
+  </head>
+  <body>
+    {% include 'layout/login_navbar.html' %}
+    
+    <div class="login-container">
+      <div class="logo-space"></div>
+
+      <form class="login-form" method="POST">
+        <div class="logo1">
+          CtrlTemp
+          <p>{% if error %} {{error}} {% endif %}</p>
+        </div>
+        <input
+          type="email"
+          name="user_email"
+          id="user_email"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="password"
+          name="user_password"
+          id="user_password"
+          placeholder="Contraseña"
+          required
+        />
+        <div class="forgot-link">
+          <a href="/reset_password">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button type="submit">INICIAR SESIÓN</input>
+        <div class="extra-links2">
+          <a title="cuenta">¿No tienes una cuenta aún?</a><br />
+        </div>
+        <div class="extra-links">
+          <a href="/signin">Regístrate aquí</a>
+        </div>
+      </form>
+    </div>
+    {% include 'layout/burger_menu.html' %}
+  </body>
+</html>

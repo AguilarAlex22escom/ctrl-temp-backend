@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles7.css" />
+  </head>
+
+  <body>
+    {% include 'layout/main_navbar.html' %}
+
+    <div class="titulo">
+      <span> CONFIGURACIÓN </span>
+    </div>
+
+    <div class="config">
+      <a href="/settings/account">
+        <span
+          ><img
+            class="icono-usuario"
+            src="../static/images/icono-usuario.png"
+            alt="usuario"
+        /></span>
+        <span class="user-text">Cuenta</span>
+        <span></span>
+      </a>
+    </div>
+
+    {% include 'layout/burger_menu.html' %}
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles3.css" />
+  </head>
+  <body>
+    {% include 'layout/index_navbar.html' %}
+
+    <div class="control-panel">
+      <div class="left-panel">
+        <h2>Salón 1014</h2>
+        <p>16:30 | Lunes</p>
+        <div class="temperature-display">
+          <span class="temp-value">{{ sensor_data }}°</span>
+        </div>
+      </div>
+      <div class="right-panel">
+        <p>¿Desea activar un modo de funcionamiento?</p>
+        {% if names and email_address %}
+        <a href="/temperature_modes" class="mode-button"
+          >Ir a modos de funcionamiento</a
+        >
+        {% else %}
+        <p>Para acceder a las opciones de cambio de temperatura, <br />es necesario que hayas iniciado sesión.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% include 'layout/burger_menu.html' %}
+  </body>
+</html>

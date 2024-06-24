@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CtrlTemp</title>
+    <link rel="stylesheet" href="../static/css/styles11.css" />
+  </head>
+  <body>
+    {% include 'layout/main_navbar.html' %}
+    <div class="titulo">
+      <span> AYUDA </span>
+    </div>
+
+    <div class="modos-ajuste">
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-ayuda.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Manual de usuario</span>
+
+            <p>
+              <a href="../static/docs/MANUALDEUSUARIO.pdf" class="mode-button" target="_blank"
+                >Visualizar</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna">
+        <div class="modo">
+          <img src="../static/images/icono-contactar.png" class="modo-icono" />
+          <div class="modo-texto-y-boton">
+            <span>Contactenos</span>
+            <p>ctrltemp@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'layout/burger_menu.html' %}
+  </body>
+</html>

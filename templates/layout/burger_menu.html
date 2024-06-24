@@ -1,0 +1,19 @@
+{% block burger_menu %}
+<div id="menudes" class="menudes">
+  <button class="close-btn" onclick="toggleMenu()">×</button>
+  {% if names and email_address %}
+  <a href="/settings">Configuración</a>
+  {% endif %}
+  <a href="/statistics">Estadísticas</a>
+  {% if names and email_address %}
+  <a href="#">Alertas</a>
+  {% endif %}
+  <a href="/help">Ayuda</a>
+  {% if names and email_address %}
+  <a href="/logout">Cerrar sesión</a>
+  {% endif %}
+</div>
+
+<script src="../static/js/script.js"></script>
+<script src="../static/js/script5.js"></script>
+{% endblock %}

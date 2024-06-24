@@ -1,0 +1,20 @@
+{% block modes_navbar %}
+<nav class="navbar">
+  <div class="logo">CtrlTemp</div>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      {% if names and email_address %}
+      <div class="navbar-links2">
+        <li><a href="/temperature_modes">Modos</a></li>
+      </div>
+      {% else %}
+      <li><a href="/login">iniciar sesion</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <button class="menu-icon" onclick="toggleMenu()">
+    <img src="../static/images/iconomenu.png" alt="toggle menu" />
+  </button>
+</nav>
+{% endblock %}

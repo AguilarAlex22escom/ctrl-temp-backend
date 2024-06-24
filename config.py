@@ -24,7 +24,7 @@ app.secret_key = os.getenv("SECRET_KEY")
 # Database's settings
 
 app.config["MYSQL_HOST"] = os.getenv("MYSQL_HOST")
-app.config["MYSQL_USER"] = "root"
+app.config["MYSQL_USER"] = "admin"
 app.config["MYSQL_PASSWORD"] = os.getenv("MYSQL_PASSWORD")
 app.config["MYSQL_DB"] = os.getenv("MYSQL_DB")
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")

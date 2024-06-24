@@ -1,9 +1,9 @@
+from config import app as application
 from routes import *
 from errors import *
-
 from api import *
 
-app
+app=application
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=10000)
+    app.run(debug=True)
